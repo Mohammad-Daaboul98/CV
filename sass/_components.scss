@@ -1,0 +1,28 @@
+@import 'mixins';
+
+.section-header{
+    font-family: inherit;
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+}
+
+.section-about{
+    font-family: inherit;
+    padding: 4rem 15rem;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:baseline;
+}
+
+@include respond(phone) {
+    .section-header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

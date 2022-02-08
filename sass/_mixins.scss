@@ -1,0 +1,29 @@
+@mixin respond($brackpoint) {
+
+    @if $brackpoint == phone {
+        @media ( max-width : 36.25em){ @content }; //580px
+    }
+
+    @if $brackpoint == B-phone {
+        @media ( max-width : 43.75em){ @content }; //700px
+    }
+
+    @if $brackpoint == XS-tab {
+        @media ( max-width : 56.25em){ @content }; //900px
+    }
+
+    @if $brackpoint == S-tab {
+        @media ( max-width : 64.0625em){ @content }; //1025px
+    }
+
+    @if $brackpoint == tab-port {
+        @media ( max-width : 73.125em){ @content }; //1170px
+    }
+
+  
+    @if $brackpoint == tab-land {
+        @media ( max-width : 81.25em){ @content }; //1300px
+    }
+    
+
+}

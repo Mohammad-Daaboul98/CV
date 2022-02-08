@@ -1,0 +1,45 @@
+@import 'mixins';
+:root{
+   --orange: #fdc144;
+   --navy-blue:  #3c3f51;
+   --gray :#b2b2b2;
+   --gray-darker:#60616b;
+   --black: #020100;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @include respond(tab-land) { // width < 1300?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 1170?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(S-tab) {
+        font-size: 43.75%; //1rem = 7, 7/16
+    }
+    @include respond(XS-tab) {
+        font-size: 37.5%; //1rem = 6, /16
+    }
+
+    @include respond(B-phone) {
+        font-size: 31.25%; //1rem = 5, 5/16
+    }
+
+    @include respond(phone) {
+    }
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
