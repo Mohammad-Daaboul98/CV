@@ -304,13 +304,13 @@
         &-content{
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
         }
         &__name{
             display: inline-block;
             font-size: 1.4rem;
             font-weight: 700;
+            align-self: flex-end;
         }
     }
 }

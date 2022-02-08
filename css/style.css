@@ -285,9 +285,9 @@ body {
     .skills-box-content {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: center; }
+      align-items: flex-end; }
     .skills-box__name {
       display: inline-block;
       font-size: 1.4rem;
-      font-weight: 700; }
+      font-weight: 700;
+      align-self: flex-end; }
