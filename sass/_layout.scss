@@ -516,3 +516,23 @@
     }
 }
 
+@include respond(S-phone){
+    .skills{
+    &-box{
+
+        &-content{
+            width: 100%;
+            justify-content: baseline;
+
+        }
+        &-container{
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        &__list{
+            width: 70%;
+        }
+    }
+}
+}
+

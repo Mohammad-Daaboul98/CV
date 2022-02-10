@@ -430,6 +430,16 @@ body {
   .skills {
     padding: 0; } }
 
+@media (max-width: 31.25em) {
+  .skills-box-content {
+    width: 100%;
+    justify-content: baseline; }
+  .skills-box-container {
+    width: 100%;
+    margin-bottom: 2rem; }
+  .skills-box__list {
+    width: 70%; } }
+
 .btn-add:link, .btn-add:active, .btn-add:visited {
   text-decoration: none;
   padding: .1rem .8rem;
@@ -478,6 +488,9 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease-in-out; }
+  @media (max-width: 31.25em) {
+    .popup {
+      padding: 0 4rem; } }
   .popup:target {
     height: 100vh;
     opacity: 1;
@@ -490,12 +503,18 @@ body {
     align-items: center;
     overflow: hidden;
     opacity: 0;
-    width: 30%;
+    width: 50%;
     height: 0;
     border-radius: 2px;
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
     transition: all .5s .4s ease-in; }
+    @media (max-width: 56.25em) {
+      .popup-box {
+        width: 80%; } }
+    @media (max-width: 31.25em) {
+      .popup-box {
+        width: 100%; } }
     .popup-box__heading {
       display: block;
       font-size: 2rem;
@@ -520,3 +539,6 @@ body {
       border-radius: 10px;
       background-color: #eee;
       outline: none; }
+      @media (max-width: 56.25em) {
+        .popup-form__input {
+          width: 40rem; } }

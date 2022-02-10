@@ -1,5 +1,8 @@
 @mixin respond($brackpoint) {
 
+    @if $brackpoint == S-phone {
+        @media ( max-width : 31.25em){ @content }; //500px
+    }
     @if $brackpoint == phone {
         @media ( max-width : 36.25em){ @content }; //580px
     }
