@@ -1,0 +1,49 @@
+.btn-add{
+ &:link,
+ &:active,
+ &:visited{
+    text-decoration: none;
+    padding: .1rem .8rem;
+   
+    font-size: 2rem;
+    background-color: var(--orange);
+    color: #eee;
+    box-shadow: 0 .5rem 1.5rem rgba(#000 , 0.2);
+    transition: all .3s;
+
+    &:active{
+        transform: translateY(10%)
+    }
+    &:hover{
+        background-color: #eee;
+        color: var(--orange);
+    }
+ }
+
+}
+
+.btn{
+    &:visited,&:link,
+    &:active{
+        text-decoration: none;
+    }
+}
+.btn-sucsess,
+.btn-danger{
+    padding: 1rem 3rem;
+    margin-right: 2rem;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.btn-sucsess{
+    border: 1px solid transparent;
+    background-color: var(--orange);
+    cursor: pointer;
+}
+.btn-danger{
+    background-color: #ccc;
+}
+
+

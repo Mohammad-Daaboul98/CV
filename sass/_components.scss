@@ -17,6 +17,7 @@
     align-items:baseline;
 }
 
+
 @include respond(phone) {
     .section-header{
         display: flex;

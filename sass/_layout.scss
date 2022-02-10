@@ -38,10 +38,10 @@
     width: 60%;
     &__paragraph{
         position: relative;
-        top:15%;
-        left: 4%;
-        width: 50%;
-        font-size: 1.4rem;
+        top:10%;
+        left: 5%;
+        width: 60%;
+        font-size: 1.8rem;
         margin-bottom: 15rem;
     }
   
@@ -72,11 +72,15 @@
 
     @include respond(tab-port) {
         &-contact{
+            position: relative;
+            top:-10%;
             margin-top: 4rem;
+            margin-left: 10rem;
         }    
     }
 
     @include respond(S-tab) {
+
         &-contact{
             margin-top: 10rem;
         }
@@ -109,18 +113,65 @@
 
     .right-content{
         &__paragraph{
-            width:80%;
-            font-size: 1.5rem;
+            width:85%;
+            font-size: 2rem;
         }
 
         &-contact{
             margin-left: -30%;
             text-align: left; 
             width: 50%;
-
+            &__heading{
+                margin-bottom: 2rem;
+            }
+            &--menu{
+                list-style: none;
+                font-size: 2.5rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+            &--item{
+                list-style: none;
+                font-size: 2.2rem;
+            }
+    
+            &--item:not(:last-child){
+                margin-bottom: 1rem;
+            }
             }
         }
+    }
 
+    @include respond(B-phone ){
+        .left-content{
+            background-color: var(--orange);
+            width:40%;
+        }
+        
+        .right-content{
+            &__paragraph{
+                margin-bottom: 20rem;
+            }
+          
+            &-contact{
+
+                &--menu{
+                    list-style: none;
+                    font-size: 3.5rem;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                }
+                &--item{
+                    list-style: none;
+                    font-size: 3.5rem;
+                }
+        
+                &--item:not(:last-child){
+                    margin-bottom: 1rem;
+                }
+            }
+    }
+}
     @include respond(phone) {
         .left-content{
             width: 100%;
@@ -153,42 +204,15 @@
         }
         .right-content{
             width: 100%;
+            &__paragraph{
+                margin: 5rem 0;
+                font-size: 3.5rem;
+            }
         }
     }
 
-    .right-content{
-        width: 100%;
-        padding: 4rem 1rem;
-        &__paragraph{
-            position: unset;
-            font-size: 3rem;
-            margin: 0;
-        }
-        &-contact{
-            text-align: left; 
-            width: 50%;
-            &__heading{
-                font-size: 4rem;
-                font-weight: 600;
-                margin-bottom: 2rem;
-            }
-            &--menu{
-                list-style: none;
-                font-size: 2rem;
-                font-weight: 500;
-                margin-bottom: 1rem;
-            }
-            &--item{
-                list-style: none;
-                font-size: 2rem;
-            }
-    
-            &--item:not(:last-child){
-                margin-bottom: 1rem;
-            }
-        }
-    }
-}
+
+
 
 
 .experiences{
@@ -212,7 +236,7 @@
             width: 45%;
         }
 
-        &--1,&--2{
+        &--1,&--2,&--3{
             margin-bottom: 4rem;
         }
 
@@ -288,29 +312,207 @@
     }
 
 }
+
+
+
 .skills{
+    display: flex;
+    flex-wrap: wrap;
     padding: 2rem 4rem;
-    background-color: #ccc;
-    width: 65%;
+    width: 100%;
+    &-header{
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+    }
     &__heading{
         font-size: 2.5rem;
         font-weight: 900;
-        margin-bottom: 2rem
+        margin-bottom: 2rem;
+        margin-right: 2rem;
     }
     &-box{
+        width: 100%;
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
-        &-content{
+
+        &-container{
+            height: 10rem;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            justify-content: space-evenly;
+        }
+        &-content{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &__text{
+                display: flex ;
+                align-items: center;
+            }
+        }
+        &__list{
+            width: 11rem;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
         }
         &__name{
+            margin-right: 2rem;
             display: inline-block;
             font-size: 1.4rem;
             font-weight: 700;
-            align-self: flex-end;
         }
+        &__input{
+            display: none;
+        }
+
+        &__item{
+            position: relative;
+        }
+        &__checkbox{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            width: 1.5rem;
+            height: 1.5rem;
+            border: .2rem solid var(--orange);;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        &__checkbox::after{
+            content: '';
+            height:1.3rem ;
+            width: 1.3rem;
+            border-radius: 50%;
+            background-color: var(--orange);
+            opacity: 0;
+            
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            transition: opacity 0.2s ;        
+        }
+        &__input:checked ~ &__item  &__checkbox::after{
+            opacity: 1;
+        }  
+        *:hover ~ &__item > &__checkbox::after{
+            background-position: 0 0;
+            opacity: 1;
+        } 
+        
     }
 }
+
+
+@include respond(XS-tab){
+    .experiences{
+        padding: 2rem 5rem;
+        width: 100%;
+    }
+    .education{
+        width: 100%;
+        &__heading{
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 2rem
+        }
+        &-box{
+            // padding:0 2rem;
+            &__item{
+                position: relative;
+                list-style: none;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            &__item::before{
+                content: '.';
+                position: absolute;
+                top:-7.6rem;
+                left: -3rem;
+                font-size: 10rem;
+                color: var(--gray);
+            }
+            &__paragraph{
+                font-size: 2rem;
+                color: var(--gray);
+                width: 60%;
+                margin-bottom: 2rem;
+            }
+    
+            &__text{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            &__item:not(:first-child){
+                margin-top: 2rem;
+            }
+        }
+    }
+
+}
+
+@include respond(phone){
+    .experiences{
+        padding: 0;
+        width: 100%;
+        margin-bottom: 10rem;
+        &__heading{
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 4rem;
+        }
+        &-box{
+            padding: 0 ;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            &__container{
+                padding: 0;
+                width: 100%;
+            }
+    
+   
+    
+          
+    
+            &__heading::before{
+                padding: .5rem 1rem;
+                position: absolute;
+                top: 3.5rem;
+                left: -20%;;
+                transform:  rotate(-90deg);
+                background-color: var(--navy-blue);
+                color: #fff;
+                content: '2020-2021';
+                font-size: 1.5rem;
+            }
+            &__paragraph{
+                font-size: 1.2rem;
+                color: var(--gray);
+                margin-bottom: 2rem;
+            }
+    
+            &__text{
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+        }
+    }
+    .education{
+        padding: 0;
+        margin-bottom: 10rem;
+    }
+    .skills{
+        padding: 0;
+    }
+}
+
