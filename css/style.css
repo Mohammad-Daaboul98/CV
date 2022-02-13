@@ -322,7 +322,7 @@ body {
       height: 10rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly; }
+      justify-content: space-between; }
     .skills-box-content {
       display: flex;
       flex-direction: row;
@@ -429,8 +429,10 @@ body {
     width: 100%; }
     .skills-box-container {
       width: 50%; }
+    .skills-box-container:not(:last-child) {
+      margin-bottom: 3rem; }
     .skills-box-content {
-      width: 60%; } }
+      width: 80%; } }
 
 @media (max-width: 36.25em) {
   .experiences {
@@ -475,14 +477,14 @@ body {
     padding: 0; } }
 
 @media (max-width: 31.25em) {
-  .skills-box-content {
-    width: 100%;
-    justify-content: baseline; }
-  .skills-box-container {
-    width: 100%;
-    margin-bottom: 2rem; }
-  .skills-box__list {
-    width: 70%; } }
+  .skills-box {
+    width: 100%; }
+    .skills-box-content {
+      width: 100%; }
+    .skills-box-container {
+      width: 100%; }
+    .skills-box__list {
+      width: 40%; } }
 
 .btn-add:link, .btn-add:active, .btn-add:visited {
   text-decoration: none;

@@ -372,7 +372,7 @@
             height: 10rem;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
 
       
@@ -523,8 +523,11 @@
             &-container{
                 width: 50% ;
             }
+            &-container:not(:last-child){
+                margin-bottom: 3rem;
+            }
             &-content{
-                width: 60%;
+                width: 80%;
             }
         }
     }
@@ -592,18 +595,15 @@
 @include respond(S-phone){
     .skills{
     &-box{
-
+        width: 100%;
         &-content{
             width: 100%;
-            justify-content: baseline;
-
         }
         &-container{
             width: 100%;
-            margin-bottom: 2rem;
         }
         &__list{
-            width: 70%;
+            width: 40%;
         }
     }
 }
