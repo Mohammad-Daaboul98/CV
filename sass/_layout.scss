@@ -151,6 +151,7 @@
         .right-content{
             &__paragraph{
                 margin-bottom: 20rem;
+                font-size: 2.5rem;
             }
           
             &-contact{
@@ -257,6 +258,8 @@
             font-size: 1.5rem;
         }
 
+
+
         &__paragraph{
             font-size: 1.2rem;
             color: var(--gray);
@@ -267,6 +270,31 @@
             font-size: 1.3rem;
             font-weight: 600;
         }
+
+        
+    @include respond(B-phone ){
+        &__heading{
+            position: relative;
+            font-size: 3rem;
+        }
+
+        &__heading::before{
+            padding: .5rem 1rem;
+            position: absolute;
+            top: 3.5rem;
+            left: -25%;
+            transform:  rotate(-90deg);
+            background-color: var(--navy-blue);
+            color: #fff;
+            content: '2020-2021';
+            font-size: 1.8rem;
+        }
+        &__text{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+    }
 
     }
 }
@@ -320,6 +348,7 @@
     flex-wrap: wrap;
     padding: 2rem 4rem;
     width: 100%;
+
     &-header{
         display: flex;
         align-items: baseline;
@@ -332,18 +361,23 @@
         margin-right: 2rem;
     }
     &-box{
-        width: 100%;
+        width: 80%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
 
         &-container{
+            width: 26.666%;
             height: 10rem;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
         }
+
+      
+
+
         &-content{
             display: flex;
             flex-direction: row;
@@ -413,41 +447,45 @@
 
 @include respond(XS-tab){
     .experiences{
-        padding: 2rem 5rem;
+        padding: 0;
         width: 100%;
+        &__heading{
+            font-size: 4rem;
+        }
     }
     .education{
         width: 100%;
+        margin-bottom: 3rem;
         &__heading{
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 900;
             margin-bottom: 2rem
         }
         &-box{
-            // padding:0 2rem;
+            padding:0 ;
             &__item{
                 position: relative;
                 list-style: none;
-                font-size: 2rem;
+                font-size: 3rem;
                 font-weight: 700;
             }
             &__item::before{
                 content: '.';
                 position: absolute;
-                top:-7.6rem;
-                left: -3rem;
-                font-size: 10rem;
+                top:-11.5rem;
+                left: -6rem;
+                font-size: 15rem;
                 color: var(--gray);
             }
             &__paragraph{
-                font-size: 2rem;
+                font-size: 3rem;
                 color: var(--gray);
                 width: 60%;
                 margin-bottom: 2rem;
             }
     
             &__text{
-                font-size: 2rem;
+                font-size: 3rem;
                 font-weight: 700;
             }
             &__item:not(:first-child){
@@ -455,8 +493,43 @@
             }
         }
     }
+    .skills{
+        padding: 0;
+        &__heading{
+            font-size: 4rem;
+        }
+        &-box{
+            &__name{
+                font-size: 2rem;
+            }
+            &__checkbox{
+                width: 2rem;
+                height: 2rem;
+            }
+            &__checkbox::after{
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+
+    }
 
 }
+
+@include respond(B-phone ){
+    .skills{
+        &-box{
+            width: 100% ;
+            &-container{
+                width: 50% ;
+            }
+            &-content{
+                width: 60%;
+            }
+        }
+    }
+}
+
 
 @include respond(phone){
     .experiences{

@@ -163,7 +163,8 @@ body {
     background-color: var(--orange);
     width: 40%; }
   .right-content__paragraph {
-    margin-bottom: 20rem; }
+    margin-bottom: 20rem;
+    font-size: 2.5rem; }
   .right-content-contact--menu {
     list-style: none;
     font-size: 3.5rem;
@@ -246,6 +247,23 @@ body {
     .experiences-box__text {
       font-size: 1.3rem;
       font-weight: 600; }
+    @media (max-width: 43.75em) {
+      .experiences-box__heading {
+        position: relative;
+        font-size: 3rem; }
+      .experiences-box__heading::before {
+        padding: .5rem 1rem;
+        position: absolute;
+        top: 3.5rem;
+        left: -25%;
+        transform: rotate(-90deg);
+        background-color: var(--navy-blue);
+        color: #fff;
+        content: '2020-2021';
+        font-size: 1.8rem; }
+      .experiences-box__text {
+        font-size: 2rem;
+        font-weight: 600; } }
 
 .education {
   padding: 2rem 3rem;
@@ -294,12 +312,13 @@ body {
     margin-bottom: 2rem;
     margin-right: 2rem; }
   .skills-box {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; }
     .skills-box-container {
+      width: 26.666%;
       height: 10rem;
       display: flex;
       flex-direction: column;
@@ -357,36 +376,61 @@ body {
 
 @media (max-width: 56.25em) {
   .experiences {
-    padding: 2rem 5rem;
+    padding: 0;
     width: 100%; }
+    .experiences__heading {
+      font-size: 4rem; }
   .education {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 3rem; }
     .education__heading {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: 900;
       margin-bottom: 2rem; }
-    .education-box__item {
-      position: relative;
-      list-style: none;
-      font-size: 2rem;
-      font-weight: 700; }
-    .education-box__item::before {
-      content: '.';
-      position: absolute;
-      top: -7.6rem;
-      left: -3rem;
-      font-size: 10rem;
-      color: var(--gray); }
-    .education-box__paragraph {
-      font-size: 2rem;
-      color: var(--gray);
-      width: 60%;
-      margin-bottom: 2rem; }
-    .education-box__text {
-      font-size: 2rem;
-      font-weight: 700; }
-    .education-box__item:not(:first-child) {
-      margin-top: 2rem; } }
+    .education-box {
+      padding: 0; }
+      .education-box__item {
+        position: relative;
+        list-style: none;
+        font-size: 3rem;
+        font-weight: 700; }
+      .education-box__item::before {
+        content: '.';
+        position: absolute;
+        top: -11.5rem;
+        left: -6rem;
+        font-size: 15rem;
+        color: var(--gray); }
+      .education-box__paragraph {
+        font-size: 3rem;
+        color: var(--gray);
+        width: 60%;
+        margin-bottom: 2rem; }
+      .education-box__text {
+        font-size: 3rem;
+        font-weight: 700; }
+      .education-box__item:not(:first-child) {
+        margin-top: 2rem; }
+  .skills {
+    padding: 0; }
+    .skills__heading {
+      font-size: 4rem; }
+    .skills-box__name {
+      font-size: 2rem; }
+    .skills-box__checkbox {
+      width: 2rem;
+      height: 2rem; }
+    .skills-box__checkbox::after {
+      width: 1.8rem;
+      height: 1.8rem; } }
+
+@media (max-width: 43.75em) {
+  .skills-box {
+    width: 100%; }
+    .skills-box-container {
+      width: 50%; }
+    .skills-box-content {
+      width: 60%; } }
 
 @media (max-width: 36.25em) {
   .experiences {
