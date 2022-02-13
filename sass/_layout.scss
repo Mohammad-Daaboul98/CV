@@ -22,7 +22,13 @@
         margin-bottom: 4rem;
     }
     &__photo{
-        max-width: 60rem;
+        max-width: 70rem;
+    }
+
+    @include respond(tab-land){
+        &__photo{
+            max-width: 60rem;
+        }
     }
   }
  
@@ -243,7 +249,7 @@
 
         &__heading{
             position: relative;
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
 
         &__heading::before{
@@ -261,13 +267,13 @@
 
 
         &__paragraph{
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: var(--gray);
             margin-bottom: 2rem;
         }
 
         &__text{
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 600;
         }
 
@@ -312,7 +318,7 @@
         &__item{
             position: relative;
             list-style: none;
-            font-size: 1.4rem;
+            font-size: 2rem;
             font-weight: 700;
         }
         &__item::before{
@@ -324,14 +330,14 @@
             color: var(--gray);
         }
         &__paragraph{
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: var(--gray);
             width: 60%;
             margin-bottom: 2rem;
         }
 
         &__text{
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 700;
         }
         &__item:not(:first-child){
@@ -361,7 +367,7 @@
         margin-right: 2rem;
     }
     &-box{
-        width: 80%;
+        width: 75%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
