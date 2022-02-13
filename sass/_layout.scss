@@ -375,8 +375,9 @@
             justify-content: space-between;
         }
 
-      
-
+        &-container:not(:last-child){
+            margin-bottom: 3rem;
+        }
 
         &-content{
             display: flex;

@@ -323,6 +323,8 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
+    .skills-box-container:not(:last-child) {
+      margin-bottom: 3rem; }
     .skills-box-content {
       display: flex;
       flex-direction: row;
