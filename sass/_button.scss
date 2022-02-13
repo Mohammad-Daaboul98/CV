@@ -35,6 +35,10 @@
     border-radius: 10px;
     color: #fff;
     font-size: 1rem;
+    @include respond(S-phone){
+        font-size: 2rem;
+        padding: 1.5rem 4rem;
+    }
 }
 
 .btn-sucsess{

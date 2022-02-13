@@ -43,11 +43,14 @@
         box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: .3);
         transition: all .5s .4s ease-in;
 
+
         @include respond(XS-tab){
             width: 80%;
         }
+        
         @include respond(S-phone){
             width: 100%;
+            padding: 4rem 3rem;
         }
 
         &__heading{
@@ -55,6 +58,9 @@
             font-size: 2rem;
             font-weight: 900;
             color: var(--orange);
+            @include respond(S-phone){
+                font-size: 4rem;
+            }
 
         }
     }
@@ -62,6 +68,7 @@
     &:target &-box{
         height: 30%;
         opacity: 1;
+        
     }
 
     &-form{
@@ -73,6 +80,10 @@
             font-size: 1.4rem;
             font-weight: 400;
             margin-right: 2rem;
+            @include respond(S-phone){
+                font-size: 2rem;
+                width: 30%;
+            }
 
         }
         &__input{
@@ -85,6 +96,9 @@
 
             @include respond(XS-tab){
                 width: 40rem;
+            }
+            @include respond(S-phone){
+                width: 80%;
             }
         }   
         
